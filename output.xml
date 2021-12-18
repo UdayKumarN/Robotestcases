@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20211217 11:27:58.396" rpa="false" schemaversion="2">
+<suite id="s1" name="Sample" source="C:\Users\udayk\PycharmProjects\TestProject\TestCases\sample.robot">
+<test id="s1-t1" name="TestCase 1">
+<kw name="Evaluate" library="BuiltIn">
+<var>${Result}</var>
+<arg>2 * ${n}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211217 11:27:58.546" level="INFO">${Result} = 20</msg>
+<status status="PASS" starttime="20211217 11:27:58.546" endtime="20211217 11:27:58.546"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${expected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20211217 11:27:58.547" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20211217 11:27:58.547" endtime="20211217 11:27:58.547"/>
+</kw>
+<doc>verify output twice</doc>
+<tag>verysimple</tag>
+<status status="PASS" starttime="20211217 11:27:58.545" endtime="20211217 11:27:58.548"/>
+</test>
+<test id="s1-t2" name="TestCase 2">
+<kw name="Make twice">
+<var>${Result}</var>
+<arg>${n}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${twice}</var>
+<arg>2 * ${n}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211217 11:27:58.549" level="INFO">${twice} = 20</msg>
+<status status="PASS" starttime="20211217 11:27:58.549" endtime="20211217 11:27:58.549"/>
+</kw>
+<msg timestamp="20211217 11:27:58.549" level="INFO">${Result} = 20</msg>
+<status status="PASS" starttime="20211217 11:27:58.549" endtime="20211217 11:27:58.549"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${Result}</arg>
+<arg>${expected}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20211217 11:27:58.550" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20211217 11:27:58.550" endtime="20211217 11:27:58.550"/>
+</kw>
+<status status="PASS" starttime="20211217 11:27:58.549" endtime="20211217 11:27:58.550"/>
+</test>
+<status status="PASS" starttime="20211217 11:27:58.401" endtime="20211217 11:27:58.550"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">verysimple</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Sample">Sample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
