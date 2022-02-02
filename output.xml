@@ -1,63 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20211217 11:27:58.396" rpa="false" schemaversion="2">
-<suite id="s1" name="Sample" source="C:\Users\udayk\PycharmProjects\TestProject\TestCases\sample.robot">
-<test id="s1-t1" name="TestCase 1">
-<kw name="Evaluate" library="BuiltIn">
-<var>${Result}</var>
-<arg>2 * ${n}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20211217 11:27:58.546" level="INFO">${Result} = 20</msg>
-<status status="PASS" starttime="20211217 11:27:58.546" endtime="20211217 11:27:58.546"/>
+<robot generator="Robot 4.1.3 (Python 3.10.0 on win32)" generated="20220202 10:19:02.485" rpa="false" schemaversion="2">
+<suite id="s1" name="Condition" source="C:\Users\udayk\PycharmProjects\TestProject\TestCases\condition.robot">
+<test id="s1-t1" name="test_case_1">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${case}=True'</arg>
+<arg>log</arg>
+<arg>'True'</arg>
+<arg>ELSE</arg>
+<arg>log</arg>
+<arg>'FALSE'</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>'True'</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220202 10:19:02.548" level="INFO">'True'</msg>
+<status status="PASS" starttime="20220202 10:19:02.548" endtime="20220202 10:19:02.548"/>
 </kw>
-<kw name="Should Be Equal As Numbers" library="BuiltIn">
-<arg>${Result}</arg>
-<arg>${expected}</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20211217 11:27:58.547" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20211217 11:27:58.547" endtime="20211217 11:27:58.547"/>
+<status status="PASS" starttime="20220202 10:19:02.547" endtime="20220202 10:19:02.548"/>
 </kw>
-<doc>verify output twice</doc>
-<tag>verysimple</tag>
-<status status="PASS" starttime="20211217 11:27:58.545" endtime="20211217 11:27:58.548"/>
+<doc>verify condition</doc>
+<tag>condition-1</tag>
+<status status="PASS" starttime="20220202 10:19:02.547" endtime="20220202 10:19:02.550"/>
 </test>
-<test id="s1-t2" name="TestCase 2">
-<kw name="Make twice">
-<var>${Result}</var>
-<arg>${n}</arg>
-<kw name="Evaluate" library="BuiltIn">
-<var>${twice}</var>
-<arg>2 * ${n}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20211217 11:27:58.549" level="INFO">${twice} = 20</msg>
-<status status="PASS" starttime="20211217 11:27:58.549" endtime="20211217 11:27:58.549"/>
+<test id="s1-t2" name="test_case_2">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alter}</arg>
+<arg>${case}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220202 10:19:02.552" endtime="20220202 10:19:02.552"/>
 </kw>
-<msg timestamp="20211217 11:27:58.549" level="INFO">${Result} = 20</msg>
-<status status="PASS" starttime="20211217 11:27:58.549" endtime="20211217 11:27:58.549"/>
-</kw>
-<kw name="Should Be Equal As Numbers" library="BuiltIn">
-<arg>${Result}</arg>
-<arg>${expected}</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<msg timestamp="20211217 11:27:58.550" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20211217 11:27:58.550" endtime="20211217 11:27:58.550"/>
-</kw>
-<status status="PASS" starttime="20211217 11:27:58.549" endtime="20211217 11:27:58.550"/>
+<doc>verify condition -2</doc>
+<tag>condition-2</tag>
+<status status="PASS" starttime="20220202 10:19:02.551" endtime="20220202 10:19:02.553"/>
 </test>
-<status status="PASS" starttime="20211217 11:27:58.401" endtime="20211217 11:27:58.550"/>
+<doc>check test suite condition</doc>
+<status status="PASS" starttime="20220202 10:19:02.487" endtime="20220202 10:19:02.554"/>
 </suite>
 <statistics>
 <total>
 <stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">verysimple</stat>
+<stat pass="1" fail="0" skip="0">condition-1</stat>
+<stat pass="1" fail="0" skip="0">condition-2</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Sample">Sample</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Condition">Condition</stat>
 </suite>
 </statistics>
 <errors>
